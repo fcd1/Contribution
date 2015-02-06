@@ -191,8 +191,14 @@ class Contribution_ContributionController extends Omeka_Controller_AbstractActio
             $user = current_user();
             $simple = get_option('contribution_simple');
 
+	    // fcd1, 01/29/15:
+	    // If user not set, set it to a pre-defined user. For dev and testing, it will be set to fcd1contrib
+	    // Later, will set it to enc2118
             if(!$user && $simple) {
-                $user = $this->_helper->db->getTable('User')->findByEmail($post['contribution_simple_email']);
+	      // fcd1, 01/29/15: 
+	      // Original line of code, commented out
+	      // $user = $this->_helper->db->getTable('User')->findByEmail($post['contribution_simple_email']);
+	      $user = $this->_helper->db->getTable('User')->findByEmail('fcd1+contrib@columbia.edu');
             }
 
             // if still not a user, need to create one based on the email address
