@@ -25,3 +25,11 @@ p#contribution-userprofile-visibility {
 div.contribution-userprofile.exists {
 	display: none;
 }
+
+#contribution-type-form div.field {
+	margin-bottom: 1em;
+}
+
+#contribution-type-form div.field p.explanation {
+	margin-top: 0.5em;
+}
