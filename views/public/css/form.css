@@ -33,3 +33,56 @@ div.contribution-userprofile.exists {
 #contribution-type-form div.field p.explanation {
 	margin-top: 0.5em;
 }
+
+/* fcd1, 02/18/15: */
+/* BEGIN CUL CSS customization */
+
+body.contribute-form {
+  color: #000;
+  background: #eee;
+}
+
+#wrap {
+  width: 950px;
+  margin: 0px auto;
+  overflow: hidden;
+  background-color: #fff;
+  font-size: larger;
+}
+
+.contribute-banner {
+  margin: 0px auto;
+  text-align: center;
+  background-color: #000;
+/*  background-color: #444; */
+}
+
+.footer11px,
+.copyright-footer {
+  width: 950px;
+  margin: 0px auto;
+  overflow: hidden;
+  background-color: #eee;
+  text-align: center;
+  font-size: 11px;
+  padding-top: 6px;
+}
+
+.contribute-form #wrap #primary h2 {
+  text-align: center;
+}
+
+.contribute-form #wrap #primary #contribution-type-form .field .two.columns.alpha {
+  padding-bottom: 6px;
+}
+
+.contribute-form #wrap #primary #contribution-type-form .field .inputs .explanation {
+  display: none;
+}
+
+.contribute-form #wrap #primary #contribution-type-form .field .inputs.five.columns.omega .input-block .input textarea {
+  width: 100%;
+}
+
+/* fcd1, 02/18/15: */
+/* BEGIN CUL CSS customization */

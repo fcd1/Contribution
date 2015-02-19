@@ -49,13 +49,16 @@
   ?>
 </head>
 
-<?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+<?php 
+  @$bodyclass .= 'contribute-form';
+  echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 <?php
   // fcd1, 7/25/13: one effect of the following call is the display of the admin bar
   // when viewing the exhibition when one is logged into Omeka (as admin?).
   // fcd1, 8/6/13: adding an empty admin-bar.php file in the common directory hides the admnin bar
 ?>
 <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+<div id="wrap">
 <?php
   $imageURL = img("LoveInAction.png");
   if ($imageURL != "") {
@@ -71,7 +74,7 @@
 <div id="primary">
   <?php echo flash(); ?>
     
-    <h1><?php echo $head['title']; ?></h1>
+    <h2><?php echo $head['title']; ?></h2>
 
     <?php if(!get_option('contribution_simple') && !$user = current_user()) :?>
       <?php $session = new Zend_Session_Namespace;
@@ -108,5 +111,6 @@
             <?php echo $csrf; ?>
         </form>
     <?php endif; ?>
+</div>
 </div>
 <?php echo foot();
