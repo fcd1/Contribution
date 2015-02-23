@@ -10,7 +10,7 @@ if ($type->isFileRequired()):
 ?>
 
 <div class="field">
-        <?php echo $this->formLabel('contributed_file', __('Upload a file')); ?>
+    <?php echo $this->formLabel('contributed_file', __('Upload a file. The maximum file size is %s.', max_file_size())); ?>
         <?php echo $this->formFile('contributed_file', array('class' => 'fileinput')); ?>
 </div>
 
@@ -26,7 +26,7 @@ foreach ($type->getTypeElements() as $contributionTypeElement) {
 if (!isset($required) && $type->isFileAllowed()):
 ?>
 <div class="field">
-        <?php echo $this->formLabel('contributed_file', __('Upload a file (Optional)')); ?>
+        <?php echo $this->formLabel('contributed_file', __('Upload a file (Optional). The maximum file size is %s.', max_file_size())); ?>
         <?php echo $this->formFile('contributed_file', array('class' => 'fileinput')); ?>
 </div>
 <?php endif; ?>
