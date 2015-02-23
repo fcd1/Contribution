@@ -12,7 +12,8 @@
 
     <!-- Stylesheets -->
     <?php
-     //queue_css_file('screen');
+    // queue_css_file('screen');
+    queue_css_file('form');
     echo head_css();
     ?>
 
@@ -20,25 +21,30 @@
     echo head_js();
     ?>
   </head>
-  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+  <?php
+    @$bodyclass .= 'contribute-thank-you';
+    echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php
       // fcd1, 7/25/13: one effect of the following call is the display of the admin bar
       // when viewing the exhibition when one is logged into Omeka (as admin?).
       // fcd1, 8/6/13: adding an empty admin-bar.php file in the common directory hides the admnin bar
     ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+    <div id="wrap">
     <?php
     $imageURL = img("LoveInAction.png");
 if ($imageURL != "") {
+  echo '<div class="contribute-banner">';
   echo '<img src="' . $imageURL . '" style="width: 50%"\>';
  }
 ?>
 <?php if ($imageURL) echo "</div>"; ?>
 <div id="primary">
-	<h1><?php echo __("Thank you for contributing!"); ?></h1>
+	<h2><?php echo __("Thank you for contributing!"); ?></h2>
 	<p><?php echo __("Your contribution will show up in the collection once an administrator approves it.")?>
 	</p>
 	<p><?php echo __(contribution_link_to_contribute(__('Make another contribution.')))?>
 	</p>
+</div>
 </div>
 <?php echo foot(); ?>

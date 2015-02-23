@@ -37,9 +37,15 @@ div.contribution-userprofile.exists {
 /* fcd1, 02/18/15: */
 /* BEGIN CUL CSS customization */
 
-body.contribute-form {
+body.contribute-form,
+body.contribute-thank-you {
   color: #000;
   background: #eee;
+}
+
+.contribute-form #wrap #primary h2,
+.contribute-thank-you #wrap #primary h2 {
+  text-align: center;
 }
 
 #wrap {
@@ -66,10 +72,6 @@ body.contribute-form {
   text-align: center;
   font-size: 11px;
   padding-top: 6px;
-}
-
-.contribute-form #wrap #primary h2 {
-  text-align: center;
 }
 
 .contribute-form #wrap #primary #contribution-type-form .field .two.columns.alpha {
