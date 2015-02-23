@@ -41,8 +41,13 @@ if ($imageURL != "") {
 <?php if ($imageURL) echo "</div>"; ?>
 <div id="primary">
 	<h2><?php echo __("Thank you for contributing!"); ?></h2>
-	<p><?php echo __("Your contribution will show up in the collection once an administrator approves it.")?>
-	</p>
+  <p>Thank you for your contribution! Each contribution is reviewed. Once approved, the contributed item will be posted and viewable 
+     <a href="https://exhibitions-dev.cul.columbia.edu/exhibits/show/fcd1-test-for-love-in-action"> here</a>
+
+.  If you have any questions or concerns please contact:
+
+<a class="mail-to" href="mailto:elizabeth.call@columbia.edu"> elizabeth.call@columbia.edu</a>
+</p>
 	<p><?php echo __(contribution_link_to_contribute(__('Make another contribution.')))?>
 	</p>
 </div>

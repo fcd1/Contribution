@@ -40,7 +40,7 @@ div.contribution-userprofile.exists {
 body.contribute-form,
 body.contribute-thank-you {
   color: #000;
-  background: #eee;
+  background: #444;
 }
 
 .contribute-form #wrap #primary h2,
@@ -68,10 +68,18 @@ body.contribute-thank-you {
   width: 950px;
   margin: 0px auto;
   overflow: hidden;
-  background-color: #eee;
+  color: #fff;
+  background-color: #444;
   text-align: center;
   font-size: 11px;
   padding-top: 6px;
+}
+
+.footer11px a,
+.footer11px a:visited,
+.copyright-footer a,
+.copyright-footer a:visited {
+  color: #eee;
 }
 
 .contribute-form #wrap #primary #contribution-type-form .field .two.columns.alpha {
@@ -84,6 +92,10 @@ body.contribute-thank-you {
 
 .contribute-form #wrap #primary #contribution-type-form .field .inputs.five.columns.omega .input-block .input textarea {
   width: 100%;
+}
+
+.contribute-thank-you #primary p {
+  margin: 1em;
 }
 
 /* fcd1, 02/18/15: */
