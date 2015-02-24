@@ -113,4 +113,4 @@
     <?php endif; ?>
 </div>
 </div>
-<?php echo foot();
+<?php echo $this->partial('contribution/footer-contribution.php'); ?>

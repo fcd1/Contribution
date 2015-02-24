@@ -52,4 +52,4 @@ if ($imageURL != "") {
 	</p>
 </div>
 </div>
-<?php echo foot(); ?>
+<?php echo $this->partial('contribution/footer-contribution.php'); ?>
