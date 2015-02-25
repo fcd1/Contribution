@@ -198,7 +198,8 @@ class Contribution_ContributionController extends Omeka_Controller_AbstractActio
 	      // fcd1, 01/29/15: 
 	      // Original line of code, commented out
 	      // $user = $this->_helper->db->getTable('User')->findByEmail($post['contribution_simple_email']);
-	      $user = $this->_helper->db->getTable('User')->findByEmail('fcd1+contrib@columbia.edu');
+	      // $user = $this->_helper->db->getTable('User')->findByEmail('fcd1+contrib@columbia.edu');
+	      $user = $this->_helper->db->getTable('User')->findByEmail('enc2118@columbia.edu');
             }
 
             // if still not a user, need to create one based on the email address
