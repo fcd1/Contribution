@@ -6,7 +6,6 @@
         echo $unit_contact;
       }
     ?>
-    Triple Pickles!!!
     </p>
     <p class="copyright-footer"> 
       <?php echo cul_copyright_information();?>
