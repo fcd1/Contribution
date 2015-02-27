@@ -228,8 +228,14 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
     public function hookDefineAcl($args)
     {
         $acl = $args['acl'];
+        // fcd1, 02/27/15:
+        // Add a new role, inherit from role "contributor"
+        $acl->addRole(new Zend_Acl_Role('contributionreviewer'), 'contributor');
         $acl->addResource('Contribution_Contribution');
-        $acl->allow(array('super', 'admin', 'researcher', 'contributor'), 'Contribution_Contribution');
+        // fcd1, 02/27/15:
+        // Remove researcher and contributor from the allow list, replace with contributionreviewer
+        // $acl->allow(array('super', 'admin', 'researcher', 'contributor'), 'Contribution_Contribution');
+        $acl->allow(array('super', 'admin', 'contributionreviewer'), 'Contribution_Contribution');
         if (get_option('contribution_simple')) {
             $acl->allow(null, 'Contribution_Contribution', array('show', 'contribute', 'thankyou', 'my-contributions', 'type-form'));
         } else {
