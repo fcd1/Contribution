@@ -528,6 +528,11 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
 
     public function filterItemCitation($cite,$args)
     {
+
+        // fcd1, 02/27/15: we don't want to filter the citation. For now, just return $cite. Later, can remove filter
+        // and its entry in the _filters array.
+        return $cite;
+
         $item = $args['item'];
         if (!$item) {
             return $cite;
