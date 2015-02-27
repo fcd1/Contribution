@@ -68,6 +68,13 @@ if (!Omeka_Captcha::isConfigured()): ?>
             $key = 0;
             foreach(loop('contribution_contributed_items') as $contributedItem):
                 $item = $contributedItem->Item;
+                // <<<<<< BEGIN fcd1, 02/26/15: Only show items that can be edited 
+                // by user -- user with "contributor" account can edit items she/he owns,
+                // and admin and superusers can edit any item. So all bases are covered, since the
+                // user curating the contributed items is the owner of the items, and folks
+                // with admin or superuser privs can also see the contributed items.
+                // END <<<<<< fcd1, 02/26/15
+                if ( is_allowed($item, 'edit')):
                 $contributor = $contributedItem->Contributor;
                 if ($contributor->id) {
                     $contributorUrl = url('contribution/contributors/show/id/' . $contributor->id);
@@ -128,6 +135,7 @@ if (!Omeka_Captcha::isConfigured()): ?>
                 </td>
                 <td class="contribution-date"><?php echo format_date(metadata($item, 'added'), Zend_Date::DATETIME_MEDIUM); ?></td>
             </tr>
+            <?php endif; ?>
             <?php endforeach; ?>
         </tbody>
         </table>

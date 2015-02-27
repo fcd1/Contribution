@@ -119,8 +119,14 @@ class Contribution_AjaxController extends Omeka_Controller_AbstractActionControl
         // In fact, Ajax is used to update or delete items and not to manage
         // contributions directly.
         // TODO Use contribution rights?
+        // >>>>>> BEGIN fcd1, 02/26/15: Commented out part of condition -- checking makePublic privs.
+        // The Omeka role "contributor" does not have the capability of making items public, including items
+        // owned by the user. Since we want all users to have "contributor" accounts, not "admin" accounts, the
+        // code was modified to not check for makePublic privs. This is not an issue, since we want the user who
+        // is curating the contributed items to be able to make these items public.
+        // <<<<<< END fcd1, 02/26/15
         if (!in_array($action, array('update', 'delete'))
-                || ($action == 'update' && (!is_allowed('Items', 'edit') || !is_allowed('Items', 'makePublic')))
+	    || ($action == 'update' && (!is_allowed('Items', 'edit') /* || !is_allowed('Items', 'makePublic') */ ))
                 || ($action == 'delete' && (!is_allowed('Items', 'edit') || !is_allowed('Items', 'delete')))
             ) {
             $this->getResponse()->setHttpResponseCode(403);
