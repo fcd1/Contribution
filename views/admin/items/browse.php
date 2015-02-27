@@ -39,7 +39,7 @@ if (!Omeka_Captcha::isConfigured()): ?>
             <input type="submit" class="small green batch-action button" name="submit-batch-proposed" value="<?php echo __('Set Needs review'); ?>">
             <?php endif; ?>
             <?php if (is_allowed('Items', 'edit') || is_allowed('Items', 'delete')): ?>
-            <input type="submit" class="small red batch-action button" name="submit-batch-delete" value="<?php echo __('Delete'); ?>">
+            <input type="submit" class="small red batch-action button" name="submit-batch-delete" value="<?php echo __('Delete - THIS WILL DELETE THE ITEM!'); ?>">
             <?php endif; ?>
         </div>
 
@@ -148,7 +148,7 @@ if (!Omeka_Captcha::isConfigured()): ?>
             <input type="submit" class="small green batch-action button" name="submit-batch-proposed" value="<?php echo __('Set Needs review'); ?>">
             <?php endif; ?>
             <?php if (is_allowed('Items', 'edit') || is_allowed('Items', 'delete')): ?>
-            <input type="submit" class="small red batch-action button" name="submit-batch-delete" value="<?php echo __('Delete'); ?>">
+            <input type="submit" class="small red batch-action button" name="submit-batch-delete" value="<?php echo __('Delete - THIS WILL DELETE THE ITEM!'); ?>">
             <?php endif; ?>
         </div>
 
