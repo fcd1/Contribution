@@ -42,7 +42,7 @@ if ($imageURL != "") {
 <div id="primary">
 	<h2><?php echo __("Thank you for contributing!"); ?></h2>
   <p>Thank you for your contribution! Each contribution is reviewed. Once approved, the contributed item will be posted and viewable 
-     <a href="https://exhibitions-dev.cul.columbia.edu/exhibits/show/fcd1-test-for-love-in-action"> here</a>
+     <a href="/exhibits/show/loveinaction"> here</a>
 
 .  If you have any questions or concerns please contact:
 
