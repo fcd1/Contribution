@@ -98,5 +98,9 @@ body.contribute-thank-you {
   margin: 1em;
 }
 
+.contribute-form #primary #form-submit {
+  margin-top: 2em;
+}
+
 /* fcd1, 02/18/15: */
 /* BEGIN CUL CSS customization */
