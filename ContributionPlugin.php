@@ -33,7 +33,12 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
         'define_routes',
         'uninstall_message',
         'admin_items_search',
-        'admin_items_show_sidebar',
+	// fcd1, 04/01/15: Comment out following filter entry because
+	// we do not want to show the Contribution info on the item page
+	// NOTE: filter method is still defined later in this file, however
+	// it is not used since the associated entry in the _hooks array is
+	// commented out on the following line:
+        // 'admin_items_show_sidebar',
         'admin_items_browse_detailed_each',
         'items_browse_sql',
         'before_save_item',
