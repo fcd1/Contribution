@@ -567,6 +567,8 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
         return $cite;
     }
 
+    // fcd1, 07/22/15: Remove this function definition once the Guest User plugin
+    // has been deactivated and ininstalled
     public function filterGuestUserLinks($nav)
     {
         $nav['Contribution'] = array(
@@ -576,6 +578,8 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
         return $nav;
     }
 
+    // fcd1, 07/22/15: Remove this function definition once the Guest User plugin
+    // has been deactivated and ininstalled
     public function filterGuestUserWidgets($widgets)
     {
         $user = current_user();
