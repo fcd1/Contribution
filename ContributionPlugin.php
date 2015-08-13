@@ -255,8 +255,9 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
 
         $acl->addResource('Contribution_Items');
         $acl->allow(null, 'Contribution_Items');
-        $acl->allow('guest', 'Items', 'showSelfNotPublic');
-        $acl->deny('guest', 'Contribution_Items');
+	// fcd1, 08/13/15: Comment following two lines, break dependcy on Guest User plugin
+        // $acl->allow('guest', 'Items', 'showSelfNotPublic');
+        // $acl->deny('guest', 'Contribution_Items');
         $acl->deny(array('researcher', 'contributor'), 'Contribution_Items', 'view-anonymous');
         $acl->addResource('Contribution_Types');
         $acl->allow(array('super', 'admin'), 'Contribution_Types');
