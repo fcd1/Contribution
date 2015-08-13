@@ -53,9 +53,10 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
         'public_navigation_main',
         'simple_vocab_routes',
         'item_citation',
-        'item_search_filters',
-        'guest_user_links',
-        'guest_user_widgets',
+        'item_search_filters'
+	// fcd1, 08/13/15: break dependency on Guest User
+        // 'guest_user_links',
+        // 'guest_user_widgets',
     );
 
     /**
@@ -567,8 +568,8 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
         return $cite;
     }
 
-    // fcd1, 07/22/15: Remove this function definition once the Guest User plugin
-    // has been deactivated and ininstalled
+    // fcd1, 08/13/15: Comment this function out, break dependcy on Guest User plugin
+    /*
     public function filterGuestUserLinks($nav)
     {
         $nav['Contribution'] = array(
@@ -577,9 +578,10 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
         );
         return $nav;
     }
+    */
 
-    // fcd1, 07/22/15: Remove this function definition once the Guest User plugin
-    // has been deactivated and ininstalled
+    // fcd1, 08/13/15: Comment this function out, break dependcy on Guest User plugin
+    /*
     public function filterGuestUserWidgets($widgets)
     {
         $user = current_user();
@@ -603,6 +605,7 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
         $widgets[] = $widget;
         return $widgets;
     }
+    */
 
     private function _adminBaseInfo($args)
     {
