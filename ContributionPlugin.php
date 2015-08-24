@@ -54,7 +54,8 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
         'simple_vocab_routes',
         'item_citation',
         'item_search_filters'
-	// fcd1, 08/13/15: break dependency on Guest User
+	// fcd1, 08/13/15: break dependency on Guest User, comment out entry for filters
+	// guest_user_links and guest_user_widgets
         // 'guest_user_links',
         // 'guest_user_widgets',
     );
@@ -255,7 +256,7 @@ class ContributionPlugin extends Omeka_Plugin_AbstractPlugin
 
         $acl->addResource('Contribution_Items');
         $acl->allow(null, 'Contribution_Items');
-	// fcd1, 08/13/15: Comment following two lines, break dependcy on Guest User plugin
+	// fcd1, 08/13/15: Comment out following two lines, break dependcy on Guest User plugin
         // $acl->allow('guest', 'Items', 'showSelfNotPublic');
         // $acl->deny('guest', 'Contribution_Items');
         $acl->deny(array('researcher', 'contributor'), 'Contribution_Items', 'view-anonymous');
